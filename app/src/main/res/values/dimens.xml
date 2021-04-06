@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="content_margin">16dp</dimen>
+    <dimen name="title_width">89dp</dimen>
+    <dimen name="title_height">21dp</dimen>
+    <dimen name="title_size">18sp</dimen>
+    <dimen name="weather_card_height">220dp</dimen>
+</resources>

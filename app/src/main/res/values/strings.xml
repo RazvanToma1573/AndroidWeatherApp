@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="details_fragment_label">Details Fragment</string>
+    <string name="map_fragment_label">Map Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="app_title">Weather</string>
+    <string name="card_data_dateTV">March 23</string>
+    <string name="card_data_informationTV">Partly Cloudy</string>
+    <string name="title_weahter">Weather</string>
+    <string name="default_temperature">18°</string>
+    <string name="default_information">Partly Cloudy</string>
+    <string name="content_footnote">View hourly forecast</string>
+
+    <!--    details default-->
+    <string name="details_information_default">Partly Cloudy</string>
+    <string name="details_location_default">Cluj-Napoca, Romania</string>
+    <string name="details_wind_default">10</string>
+    <string name="details_wind_two_default">km/h</string>
+    <string name="details_rain_default">23</string>
+    <string name="details_rain_two_default">%</string>
+    <string name="details_temperature_one_default">10°</string>
+    <string name="details_temperature_two_default">21°</string>
+    <string name="details_temperature_three_default">27°</string>
+    <string name="details_date_default">10</string>
+    <string name="default_location">Cluj-Napoca</string>
+    <string name="change_location">CHANGE</string>
+    <string name="update_location">UPDATE LOCATION</string>
+</resources>

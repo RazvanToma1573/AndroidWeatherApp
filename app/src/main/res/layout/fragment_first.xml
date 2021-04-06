@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_gray_background"
+    android:orientation="vertical"
+    tools:context=".ui.FirstFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/content_margin"
+        android:background="@color/transparent_background_color"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/contentMCV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="89dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/title_weahter"
+            android:textColor="#FF405E6B"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/title_temperatureTV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/locationTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/default_location"
+            android:textColor="#FF405E6B"
+            android:textSize="14sp"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/change_locationBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:background="@drawable/change_location_border"
+            android:text="@string/change_location"
+            android:textColor="#FF405E6B"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:layout_marginStart="10dp"
+            android:outlineProvider="none"
+            android:clickable="true"
+            app:layout_constraintStart_toEndOf="@id/locationTV"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/title_temperatureTV"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/default_temperature"
+            android:textColor="#FF405E6B"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@id/title_infoTV"
+            app:layout_constraintEnd_toStartOf="@id/title_iconTV"
+            app:layout_constraintStart_toEndOf="@id/titleTV"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_infoTV"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="295dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Clouds"
+            android:textColor="#FF405E6B"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_temperatureTV" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/title_iconTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/ic_cloudy_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/title_temperatureTV"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/contentMCV"
+        android:layout_width="match_parent"
+        android:layout_height="129dp"
+        android:layout_margin="@dimen/content_margin"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toTopOf="@id/itemsRV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_constraint_layout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card_data_constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/card_data_temperatureTV"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="103dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/default_temperature"
+                android:textColor="#FF405E6B"
+                android:textSize="26sp"
+                app:layout_constraintBottom_toBottomOf="@id/card_data_informationTV"
+                app:layout_constraintEnd_toStartOf="@id/card_iconIV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/card_data_informationTV"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="25dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/card_data_informationTV"
+                android:textColor="#FF405E6B"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/card_iconIV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_data_temperatureTV" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/card_iconIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="103dp"
+                android:src="@drawable/ic_cloudy"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/card_data_informationTV"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/card_data_noteTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="@string/content_footnote"
+                android:textColor="#FFC8CFD2"
+                android:textSize="10sp"
+                android:clickable="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/contentTV"
+        android:layout_width="69dp"
+        android:layout_height="31dp"
+        android:background="#405E6B"
+        android:clickable="false"
+        android:focusable="false"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center"
+        android:padding="0dp"
+        android:text="Today"
+        android:textColor="@color/white"
+        android:elevation="11dp"
+        android:outlineProvider="none"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:layout_marginBottom="115dp"
+        android:textSize="14sp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toStartOf="@id/contentMCV"
+        app:layout_constraintBottom_toBottomOf="@id/contentMCV"/>
+
+    <TextView
+        android:id="@+id/placeholderTV"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:elevation="0dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toTopOf="@id/contentMCV"
+        app:layout_constraintEnd_toEndOf="@id/contentMCV"
+        app:layout_constraintStart_toStartOf="@id/contentMCV"
+        app:layout_constraintBottom_toBottomOf="@id/contentMCV"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/itemsRV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/content_margin"
+        android:layout_marginEnd="@dimen/content_margin"
+        android:paddingTop="17dp"
+        android:clipToPadding="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/placeholderTV"
+        tools:listitem="@layout/item_view" />
+</androidx.constraintlayout.widget.ConstraintLayout>
